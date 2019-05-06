@@ -1,9 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Hello Coursera</title>
-</head>
-<body>
-<h1> Hello Coursera! dshdgfh </h1>
-</body>
+  <head>
+    <title>CMFGEN Database Project</title>
+    <link rel="stylesheet" href="Interface.css">
+  </head>
+  <div id="header">
+    <div id="headercontent">
+      <img id="ibero" src="Images/ibero.png"/>
+      <img id="abacus" src="Images/abacus.jpg"/>
+      <img id="ipn" src="Images/ipn.jpeg"/>
+      <h1 id="name">CMFGEN DATABASE PROJECT</h1>
+   </div>
+  </div>
+  <body>
+    <div id="content">
+      <div id="filters">
+	<form id="form" action="search.php" method="POST" target="_blank">
+	  <div class = "box">
+	    <ul>
+	      <li class = "upper"><h2>Physical parameters</h2></li>	      
+	      <li class = "upper">Mass M<sub>*</sub>/M<sub>&#8857</sub></li>
+	      From <input type="text" class="valuebox" name="MASS1" placeholder="min: 14">
+	      to <input type="text" class="valuebox" name="MASS2" placeholder="max: 55">
+	      <input type="checkbox" name="MASS" value="Y"> Show in results	     	      
+	      <li class = "upper">Mass loss rate (10<sup> -6</sup> M<sub>&#8857</sub>/year)</li>
+	      From <input type="text" class="valuebox" name="MDOT1" placeholder="min: 1">
+	      to <input type="text" class="valuebox" name="MDOT2" placeholder="max: 21">
+	      <input type="checkbox" name="MDOT" value="Y"> Show in results	      	      
+	      <li class = "upper">Rstar (r<sub>*</sub>/r<sub>&#8857</sub>)</li>
+	      From <input type="text" class="valuebox" name="RSTAR1" placeholder="min: 137">
+	      to <input type="text" class="valuebox" name="RSTAR2" placeholder="max: 299">
+	      <input type="checkbox" name="RSTAR" value="Y"> Show in results	      	      
+	      <li class = "upper">Rmax</li>
+	      From <input type="text" class="valuebox" name="RMAX1" placeholder="min: 318">
+	      to <input type="text" class="valuebox" name="RMAX2" placeholder="max: 440">
+	      <input type="checkbox" name="RMAX" value="Y"> Show in results	      	      
+	      <li class = "upper">V<sub>&infin;</sub> (km/s)</li>
+	      From <input type="text" class="valuebox" name="VINF1" placeholder="min: 940">
+	      to <input type="text" class="valuebox" name="VINF2" placeholder="max: 1660">
+	      <input type="checkbox" name="VINF" value="Y"> Show in results	      	      
+	      <li class = "upper">T<sub>eff</sub> (10<sup>4</sup> °K)</li>
+	      From <input type="text" class="valuebox" name="TEFF1" placeholder="min: 2">
+	      to <input type="text" class="valuebox" name="TEFF2" placeholder="max: 3">
+	      <input type="checkbox" name="TEFF" value="Y"> Show in results	     	      
+	      <li class = "upper">Lstar (10<sup>3</sup> L<sub>*</sub>/L<sub>&#8857</sub>)</li>
+	      From <input type="text" class="valuebox" name="LSTAR1" placeholder="min: 350">
+	      to <input type="text" class="valuebox" name="LSTAR2" placeholder="max: 830">
+	      <input type="checkbox" name="LSTAR" value="Y"> Show in results	     	      
+	      <li class = "upper">&beta;</li>
+	      From <input type="text" class="valuebox" name="BETA1" placeholder="min: 1">
+	      to <input type="text" class="valuebox" name="BETA2" placeholder="max: 3">
+	      <input type="checkbox" name="BETA" value="Y"> Show in results	     	    
+	      <li class = "upper">log g</li>
+	      From <input type="text" class="valuebox" name="LOGG1" placeholder="min: 2">
+	      to <input type="text" class="valuebox" name="LOGG2" placeholder="max: 4">
+	      <input type="checkbox" name="LOGG" value="Y"> Show in results		
+	    </ul>
+	  </div>
+	  <div class = "box">
+	    <ul>
+	      <li class = "upper"><h2>Chemical abundance (by number)</h2></li>	      	      
+	      <li class = "upper">H/X (10<sup> -1</sup>)</li>
+	      From <input type="text" class="valuebox" name="H1" placeholder="min: -8">
+	      to <input type="text" class="valuebox" name="H2" placeholder="max: -3">
+	      <input type="checkbox" name="HYDX" value="Y"> Show in results
+	      <li class = "upper">He/X (10<sup> -1</sup>)</li>
+	      From <input type="text" class="valuebox" name="He1" placeholder="min: -5">
+	      to <input type="text" class="valuebox" name="He2" placeholder="max: -3">
+	      <input type="checkbox" name="HEX" value="Y"> Show in results	      	      
+	      <li class = "upper">C/X (10<sup> -3</sup>)</li>
+	      From <input type="text" class="valuebox" name="C1" placeholder="min: -24">
+	      to <input type="text" class="valuebox" name="C2" placeholder="max: 0">
+	      <input type="checkbox" name="CARBX" value="Y"> Show in results	     	      
+	      <li class = "upper">N/X (10<sup> -4</sup>)</li>
+	      From <input type="text" class="valuebox" name="N1" placeholder="min: -6">
+	      to <input type="text" class="valuebox" name="N2" placeholder="max: 0">
+	      <input type="checkbox" name="NITX" value="Y"> Show in results	      	      
+	      <li class = "upper">O/X (10<sup> -3</sup>)</li>
+	      From <input type="text" class="valuebox" name="O1" placeholder="min: -6">
+	      to <input type="text" class="valuebox" name="O2" placeholder="max: 0">
+	      <input type="checkbox" name="OXYX" value="Y"> Show in results	      	      
+	      <li class = "upper">Si/X (10<sup> -5</sup>)</li>
+	      From <input type="text" class="valuebox" name="Si1" placeholder="min: 3">
+	      to <input type="text" class="valuebox" name="Si2" placeholder="max:4">  
+	      <input type="checkbox" name="SILX" value="Y"> Show in results	     	      
+	      <li class = "upper">P/X (10<sup> -7</sup>)</li>
+	      From <input type="text" class="valuebox" name="P1" placeholder="min: 2">
+	      to <input type="text" class="valuebox" name="P2" placeholder="max: 3">	    
+	      <input type="checkbox" name="PHOSX" value="Y"> Show in results	     	      
+	      <li class = "upper">S/X (10<sup> -5</sup>)</li>
+	      From <input type="text" class="valuebox" name="S1" placeholder="min: 2">
+	      to <input type="text" class="valuebox" name="S2" placeholder="max: 3">
+	      <input type="checkbox" name="SULX" value="Y"> Show in results	      	      
+	      <li class = "upper">Fe/X (10<sup> -5</sup>)</li>
+	      From <input type="text" class="valuebox" name="Fe1" placeholder="min: 3">
+	      to <input type="text" class="valuebox" name="Fe2" placeholder="max: 4">
+	      <input type="checkbox" name="IRONX" value="Y"> Show in results	     
+	    </ul>
+	  </div>
+	  <div id = "misc">
+	    <ul>
+	      <li class = "upper"><h2>Options</h2></li>
+	      <li class = "upper"><input type="checkbox" name="display" value="Y"> Show all parameters</li>	     
+	      <li class = "upper"> <h4>Rotation</h4>
+		<input type="radio" name="Rot" value="Y">Yes
+		<input type="radio" name="Rot" value="N">No
+		<input type="radio" name="Rot" value="Whatever" checked>Both
+	      </li><br>	      
+	      <li class = "button"><input type="submit" name="submit" value="Search"></li>
+	    </ul>
+	  </div>
+	</form>
+	<div class = "button" id = "help">
+	  <form action = "help.php">
+	    <input type = "submit" value = "Help">
+	  </form>
+	</div>
+      </div>
+    </div>
+  </body>
 </html>

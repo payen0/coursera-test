@@ -1,0 +1,98 @@
+*{margin: 0; padding: 0;}
+
+#header{
+    background-color: #FF0000;
+    min-width: 1350px;
+}
+
+#headercontent{
+    height: 76px;
+    width: 1350px;
+    margin: 0 auto;
+    padding-top: 3px;
+}
+
+#abacus{
+    height: 70px;
+    margin: 3px 0px 3px 5px;
+    float: left;   
+}
+
+#ibero{
+    height: 70px;
+    margin: 3px 0px 3px 15px;
+    float:right;
+}
+
+#ipn{
+    height: 70px;
+    margin: 3px 130px 3px 5px;
+    float: left;
+}
+
+body{
+    font: 15px arial, sans-serif;
+    line-height: 17px;
+}
+
+#name{
+    font: bold 50px arial, sans-serif;
+    margin-top: 12px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#content{
+    width: 1350px;
+    margin: 0 auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.upper{
+    padding-bottom: 5px;
+    height: 25px;
+    padding-top: 10px;
+}
+
+#filters{
+    margin-left: 75px;
+}
+
+.box{
+    float: left;
+    padding-bottom: 20px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#misc{
+    float: left;
+    padding-bottom: 10px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#help{
+    float: left;
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input.valuebox{
+    width: 115px;
+    height: 15px;    
+}
